@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p::first-letter{
+      color: aqua;
+      font-size: xx-large;
+    }          
+    p::first-line{
+      color: red;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    p::before{
+      color: #000;
+    }
+    ::marker{
+      color: blue;
+      font-size: large;
+    }
+    ::selection{
+      color: red;
+      background-color: yellow;
+    }
+    #home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;  
+  }
+
+  #next {
+  width: 43px;
+  height: 44px;
+  background: url(img_navsprites.gif) -91px 0;
+  }       /* image-spite */
+
+  [id |=top]{
+    background-color: blue;
+  }
+  </style>
+</head>
+<body>
+  <p>The ::first-letter Pseudo-element</p>
+  <or>
+    <li>h1</li>
+    <li>h2</li>
+    <li>h3</li>
+  </or>
+
+  <img id="home" src="img_trans.gif" width="1" height="1">
+  <img id="next" src="img_trans.gif" width="1" height="1">
+
+  <h1 id="top-header">Welcome</h1>
+  <p class="top-text">Hello world!</p>
+  <p class="topcontent">Are you learning CSS?</p>
+</body>
+</html>
