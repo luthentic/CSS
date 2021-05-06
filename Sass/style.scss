@@ -1,0 +1,25 @@
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+$primary-color: #0e6cff;
+$secondary-colort:#ff8700;
+
+body{
+  background: $secondary-colort;
+  font-family: $myFont;
+}
+.h-1{
+  background-color: $primary-color;
+}
+.h-2{
+  $myColor: green !global;
+  background-color: $myColor;
+}
+img{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10vh;
+  height: 20vh;
+}

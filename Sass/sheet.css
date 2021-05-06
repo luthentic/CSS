@@ -1,0 +1,22 @@
+body {
+  background: #ff8700;
+  font-family: Helvetica, sans-serif;
+}
+
+.h-1 {
+  background-color: #0e6cff;
+}
+
+.h-2 {
+  background-color: green;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10vh;
+  height: 20vh;
+}
+
+/*# sourceMappingURL=sheet.css.map */
