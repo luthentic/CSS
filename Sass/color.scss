@@ -1,0 +1,9 @@
+$myPink: #EE82EE;
+$myBlue: #4169E1;
+$myGreen: #8FBC8F;
+@mixin important-text1{
+  color: rgb(28, 138, 132);
+  font-size: 29px;
+  font-weight: bold;
+  border: 1px solid rgb(12, 238, 61);
+}

@@ -3,12 +3,35 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.h-1 {
+.h1 {
   background-color: #0e6cff;
 }
 
-.h-2 {
+.h2 {
   background-color: green;
+}
+
+.h3 {
+  background-color: #8FBC8F;
+}
+
+.h4 {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.hh1, .hh2 {
+  color: #1c8a84;
+  font-size: 29px;
+  font-weight: bold;
+  border: 1px solid #0cee3d;
+}
+
+.hh2 {
+  font-size: 40;
+  color: #EE82EE;
 }
 
 img {

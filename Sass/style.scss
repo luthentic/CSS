@@ -1,3 +1,5 @@
+@import "color";
+
 $myFont: Helvetica, sans-serif;
 $myColor: red;
 $myFontSize: 18px;
@@ -5,17 +7,42 @@ $myWidth: 680px;
 $primary-color: #0e6cff;
 $secondary-colort:#ff8700;
 
+@mixin important-text{
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
 body{
   background: $secondary-colort;
   font-family: $myFont;
 }
-.h-1{
+.h1{
   background-color: $primary-color;
 }
-.h-2{
+.h2{
   $myColor: green !global;
   background-color: $myColor;
 }
+.h3{
+  background-color: $myGreen;
+}
+.h4{
+  @include important-text();
+  
+}
+
+.hh1{
+  @include important-text1();
+}
+
+
+.hh2{
+  @extend .hh1;
+  font-size: 40;
+  color: $myPink;
+}
+
 img{
   display: flex;
   align-items: center;
