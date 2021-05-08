@@ -9,6 +9,17 @@
     *{
       background-color: bisque;
     }
+    :root{
+      --blue: #1e90ff;
+      --white: #ffffff;
+    }
+    .variables{
+      color: var(--blue);
+      background-color: var(--white);
+    }
+    hr{
+      border: 3px solid black;
+    }
     .pseudo::first-letter{
       color: aqua;
       font-size: xx-large;
@@ -67,7 +78,7 @@
   }
   .radial-gradient{
     border: 2px solid black;
-    background-image: repeating-radial-gradient(blue , green 10%, pink 15%);
+    background-image: repeating-radial-gradient(blue, green 10% , pink );
   }
   .transition{
     width: 100px;
@@ -76,19 +87,121 @@
     transition: width 2s; 
   }
   .transition:hover{
-    width:300px;
+    width:100vmax;
   }
+
+  .animation{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(12, 236, 42);
+    position: relative;
+    animation-name: example;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes example {
+    0%   { left:0px; top:0px;}
+    25%  { left:60%; top:0px;}
+    /* 40%  { left:40%;} */
+    50%  { left: 100vmax;top:0px;}
+    75%  { left: 30%; top:0px;}
+    100% { left:0px; top:0px;}
+}
+.reflection{
+  width: 100px;
+  height: 100px;
+  -webkit-box-reflect: right 20px;
+}
+.object-fit{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: 15% 80%;
+}
+.column{
+  column-count: 3;
+  column-gap: 20px;
+}
+.resize{
+  border: 1px solid black;
+  padding: 20px;
+  width: 300px;
+  resize: both;
+  overflow: auto;
+}
+@media screen and (max-width:800px){
+  *{
+    background-color: lightgreen;
+  }
+}
+.flex-container{
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+  background-color: DodgerBlue;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
   </style>
 </head>
 <body>
   
-  <p class="pseudo">The ::first-letter Pseudo-element</p><br>
+  <p class="pseudo">The ::first-letter Pseudo-element</p><hr>
+  <div class="radius">Jordan Bennett (born 1986)</div><hr>
+  <div class="transparent">Jordan Bennett (born 1986)</div><hr>
+  <div class="linear-gradient">Jordan Bennett (born 1986)</div><hr>
+  <div class="radial-gradient">Jordan Bennett (born 1986)</div><hr>
+  <div class="transition"> </div><hr>
+  <div class="animation"></div>
+  <img class="reflection" src="databaseA3.png" width="150px" height="160px"><hr>
+  <img class="object-fit" id="object-position" src="databaseA3.png" width="150px" height="160px"><hr>
+  <div class="column">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium dignissimos facere veniam expedita nulla? Eum minus eligendi velit. Non magni nihil quod laborum eaque, dolorem dolorum facere voluptatum dolores soluta.</div><hr>
+  <div class="resize"> Click and drag the bottom right corner of this div element </div><hr>
+  <h1 class="variables">import css from root</h1><hr>
 
-  <h1 class="radius">Jordan Bennett (born 1986)</h1><br>
-  <h1 class="transparent">Jordan Bennett (born 1986)</h1><br>
-  <h1 class="linear-gradient">Jordan Bennett (born 1986)</h1><br>
-  <h1 class="radial-gradient">Jordan Bennett (born 1986)</h1><br>
-  <h5 class="transition"> </h5>
+  <div class="flex-container">
+    <div style="flex: 0 10 200px; order:3">1</div>
+    <div style="order:1; -ms-flex-align: start;">2</div>
+    <div style="order:2">3</div>  
+  </div><hr>
 
   <or>
     <li>h1</li>
@@ -103,8 +216,6 @@
   <p id="top-header">[id |=top] example</p>
   <p class="top-text">[id |=top] example</p>
   <p class="topcontent">[id |=top] example</p>
-
-  <div class="animation"></div>
 
 </body>
 </html>
