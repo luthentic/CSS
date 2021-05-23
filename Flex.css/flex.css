@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+}
+
+.wrapper{
+  width: 100%;
+  margin: 0;
+  max-width: 960px;
+}
+
+
+.flex-container{
+  display: flex;
+  background-color: gray;
+  flex-wrap: wrap;
+}  
+
+.box{
+  height: 100px;
+  min-width: 200px;
+ flex: 1 0 200px;  /* grow shrink basis */
+}
+.one{
+  background-color: red;
+   /* flex-grow: 1;  relative to next value */
+   /* flex-shrink: 1; */
+}
+.two{
+  background-color: blue;
+
+}
+.three{
+  background-color: yellow;
+}
+
