@@ -1,0 +1,28 @@
+.wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+}
+.flex-container{
+  display: flex;
+  background-color: gray;
+  flex-wrap: wrap;
+  flex-flow: row-reverse;
+  justify-content: flex-start;
+}   
+.box{
+  height: 100px;
+  
+  flex: 0 0 100px; 
+}   /*grow: 1 shrink: 0 basis: 200*/
+.one{
+  background-color: red;
+  /* flex-grow: 1;  relative to next value 
+  flex-shrink: 1;  */
+}
+.two{
+  background-color: blue;
+}
+.three{
+  background-color: yellow;
+}

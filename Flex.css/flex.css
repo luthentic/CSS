@@ -1,35 +1,90 @@
 *{
   margin: 0;
+  
 }
 
 .wrapper{
   width: 100%;
   margin: 0;
-  max-width: 960px;
+  
 }
 
 
-.flex-container{
+nav{
+  background-color: #333;
   display: flex;
-  background-color: gray;
+  justify-content: space-between;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color:#fff;
+  display: block;
+  padding: 10px;
+}
+
+nav a:hover{
+  background-color: #555;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  flex: 1 1 0;
+}
+
+a.fb{
+  background:url(iconfinder_1_Facebook_colored_svg_copy_5296499.png) no-repeat center;
+  background-size: 80%;
+  color: #333;
+}
+a.tw{
+  background:url(iconfinder_1_Twitter3_colored_svg_5296516.png) no-repeat center;
+  background-size: 80%;
+  color: #333;
+}
+.social a{
+  text-indent: -1000px;
+}
+nav ul.social{
+  flex: 1 1 0;
+  display: flex;
+}
+nav ul.social li{
+  flex: 1 1 0; 
+}
+.social{
+  max-width: 80px;
+  margin: 0px;
+}
+article{
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+article h2{
+  text-align: center;
+  text-size-adjust: 20px;
+}
+#blocks{
+  display: flex;
   flex-wrap: wrap;
-}  
-
-.box{
-  height: 100px;
-  min-width: 200px;
- flex: 1 0 200px;  /* grow shrink basis */
+  justify-content: space-between;
 }
-.one{
-  background-color: red;
-   /* flex-grow: 1;  relative to next value */
-   /* flex-shrink: 1; */
+article{
+  flex: 0 1 32%;
+  transition: flex-basis 0.2s linear;
 }
-.two{
-  background-color: blue;
-
+article.stack{
+  flex: 0 1 100%;
 }
-.three{
-  background-color: yellow;
-}
-

@@ -17,13 +17,52 @@
         <li><a href="">contact</a></li>
       </ul>
 
+      <ul class="social">
+        <li><a href="" class="fb">Facebook</a></li>
+        <li><a href="" class="tw">Twitter</a></li>
+      </ul>
+
     </nav>
 
-    <!-- <div class="flex-container"> 
-      <div class="box one"></div>
-      <div class="box two"></div>
-      <div class="box three"></div>
-    </div> -->
+    <div style="margin: 20px;">
+      <span>Layout:</span>
+      <a href="#" id="stack">Stack</a>
+      <a href="#" id="grid">Grid</a>
+    </div>
+    <section id="blocks">
+      <article>
+        <h2>LEEEEEEEE</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, iusto, sapiente veniam repellendus vitae at, accusamus enim numquam iste error voluptate. Reiciendis, eveniet fuga vel repudiandae recusandae dolorem repellat at.</p>
+      </article>
+      <article>
+        <h2>KIMMMMMMM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus velit recusandae eaque nihil repellendus esse praesentium dolores excepturi eius architecto iusto saepe quas fugit accusantium laborum nesciunt, temporibus accusamus?</p>
+      </article>
+      <article>
+        <h2>PLLLLLLLL</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil distinctio ipsum officia suscipit fugiat eligendi corrupti, at eum amet quaerat, quis pariatur omnis quasi molestiae commodi magni eveniet doloremque?</p>
+      </article>
+      <article>
+        <h2>QULLLLLLL</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis praesentium molestiae eaque ipsa, asperiores cum doloremque tenetur ex velit quia earum repellat totam iste veritatis, rerum et sequi? Mollitia, a?</p>
+      </article>
+    </section>
   </div>
+
+  <script>
+    document.getElementById('stack').addEventListener('click',()=>{
+      let a = document.querySelectorAll("article");
+      for(let i=0;i<a.length;i++){
+      a[i].classList.add('stack')
+      }
+    })
+    document.getElementById('grid').addEventListener('click',()=>{
+      let a = document.getElementsByTagName('ARTICLE');
+      for(let i=0;i<a.length;i++){
+      a[i].classList.remove('stack')
+      }
+    })
+  </script>
 </body>
 </html>
+<!-- Class return node list  ID return one node -->
