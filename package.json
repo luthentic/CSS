@@ -1,0 +1,23 @@
+{
+  "name": "CSS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build Tailwind/tail.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luthentic/animatedcss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luthentic/animatedcss/issues"
+  },
+  "homepage": "https://github.com/luthentic/animatedcss#readme",
+  "dependencies": {
+    "tailwindcss": "^2.1.2"
+  }
+}
